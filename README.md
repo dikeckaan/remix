@@ -31,13 +31,24 @@ npm start
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/callsmusic/CallsMusicRemix)
 
+## Deployin with Dockerfile
+- Clone the repo and go directory
+- Install docker with this
+```bash
+ sudo apt update && sudo apt install docker.io -y
+```
+- Then build and run image
+```bash
+ docker build . -t callsmusicremix
+ docker run callsmusicremix
+```
 ## Configuring
 
 - `BOT_TOKEN`: Telegram bot token.
 - `STRING_SESSION`: A GramJS/Telethon string session. You can generate one [here](https://rojserbest.github.io/bssg).
 - `API_ID`: Telegram app ID.
 - `API_HASH`: Telegram app hash.
-- `LOCALE`: An [available](#available-languages) bot language. Default: `en`.
+- `LOCALE`: An [available](./locales) bot language. Default: `en`.
 - `MAX_PLAYLIST_SIZE`: Max YouTube playlist size. Default: `10`.
 
 ## Commands
@@ -81,18 +92,6 @@ Skips the current stream.
 ### stop
 
 Clears the queue and removes the userbot from the call.
-
-## Available languages
-
-- `ckb` Central Kurdish
-- `en` English
-- `fa` Farsi
-- `ml` Malayalam
-- `pt_BR` Brazilian Portuguese
-- `si` Sinhalese
-- `tr` Turkish
-
-Don't see your language here? Pull requests to add new languages are welcomed!
 
 ## Inspiration
 
